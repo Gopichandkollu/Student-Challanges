@@ -127,8 +127,8 @@ export default function Home() {
 
             {/* Section grouping note */}
             <div className="mt-10">
-              <h2 className="text-xl text-white font-semibold text-center mb-2">Google Prompts Challenge 🎉</h2>
-                <p className="text-center text-gray-400 mb-6">Includes Launch All, Study Schedule and other Google prompts below.</p>
+              <h2 className="text-xl text-white font-semibold text-center mb-2">Student Challanges</h2>
+                <p className="text-center text-gray-400 mb-6">Interactive student prompts and initiatives to boost your skills.</p>
                 <div className="mt-6 flex justify-center">
                   <button
                     onClick={() => launchAllPrompts()}
