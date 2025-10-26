@@ -119,7 +119,7 @@ export default function Home() {
             }`}
           >
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4 text-balance leading-tight mx-auto">
-              Student Challanges
+              Student Challenges
             </h1>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function Home() {
 
             {/* Section grouping note */}
             <div className="mt-10">
-              <h2 className="text-xl text-white font-semibold text-center mb-2">Student Challanges</h2>
+              <h2 className="text-xl text-white font-semibold text-center mb-2">Student Challenges</h2>
                 <p className="text-center text-gray-400 mb-6">Interactive student prompts and initiatives to boost your skills.</p>
                 <div className="mt-6 flex justify-center">
                   <button
