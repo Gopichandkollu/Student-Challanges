@@ -63,6 +63,21 @@ export default function Home() {
     }
   }
 
+  // Referral code for Bitcoin Conference — display and copy-to-clipboard helper
+  const referralCode = "Y7G2MUM1"
+  const copyReferralCode = async () => {
+    try {
+      await navigator.clipboard.writeText(referralCode)
+      setToastMessage("Referral code copied to clipboard")
+      setToastVisible(true)
+      setTimeout(() => setToastVisible(false), 3500)
+    } catch (err) {
+      setToastMessage("Could not copy referral code")
+      setToastVisible(true)
+      setTimeout(() => setToastVisible(false), 3500)
+    }
+  }
+
   // Sequentially open prompts with a small delay to reduce popup blocking.
   const [isLaunchingAll, setIsLaunchingAll] = useState(false)
   const [toastVisible, setToastVisible] = useState(false)
@@ -298,14 +313,29 @@ export default function Home() {
                 </div>
 
                 <div className="pt-4">
-                  <a
-                    href="https://rewards.bitcoinconferenceindia.com/?referralCode=Y7G2MUM1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold py-4 px-8 rounded-full hover:shadow-xl hover:shadow-yellow-500/20 hover:scale-105 transition-all duration-300 text-center"
-                  >
-                    Register Now for Free 🎟️
-                  </a>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-sm text-gray-300">Referral code:</span>
+                    <span className="font-mono font-semibold text-white bg-yellow-900/10 px-3 py-1 rounded">{referralCode}</span>
+                    <button
+                      type="button"
+                      onClick={copyReferralCode}
+                      className="ml-2 inline-flex items-center gap-2 text-sm bg-yellow-600 hover:bg-yellow-500 text-white rounded px-3 py-1 transition"
+                    >
+                      Copy
+                    </button>
+                  </div>
+
+                  <div className="pt-4">
+                    <a
+                      href="https://rewards.bitcoinconferenceindia.com/?referralCode=Y7G2MUM1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold py-4 px-8 rounded-full hover:shadow-xl hover:shadow-yellow-500/20 hover:scale-105 transition-all duration-300 text-center"
+                    >
+                      Register Now for Free 🎟️
+                    </a>
+                  </div>
+
                 </div>
 
                 <p className="text-sm text-gray-400 italic">
