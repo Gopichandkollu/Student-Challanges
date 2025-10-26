@@ -14,11 +14,11 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Google Student Ambassador Challenge Prompts",
+  title: "Student Challenges",
   description: "Run Gemini prompts instantly — explore, learn, and create with AI",
   generator: "v0.app",
   openGraph: {
-    title: "Google Student Ambassador Challenge Prompts",
+    title: "Student Challenges",
     description: "Run Gemini prompts instantly — explore, learn, and create with AI",
     type: "website",
   },
